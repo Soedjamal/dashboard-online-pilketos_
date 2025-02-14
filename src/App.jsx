@@ -3,25 +3,13 @@ import { AppBar, Toolbar, Button, Container } from "@mui/material";
 import Candidates from "./components/Candidates";
 import VoterCards from "./components/VoterCards";
 import Voters from "./components/Voters";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
-      <AppBar position="static">
-        <Toolbar>
-          <Button color="inherit" component={Link} to="/">
-            Kandidat
-          </Button>
-          <Button color="inherit" component={Link} to="/voter-cards">
-            Kartu Pemilih
-          </Button>
-          <Button color="inherit" component={Link} to="/voters">
-            Data Pemilih
-          </Button>
-        </Toolbar>
-      </AppBar>
-
-      <Container maxWidth="lg">
+      <Navbar />
+      <Container >
         <Routes>
           <Route path="/" element={<Candidates />} />
           <Route path="/voter-cards" element={<VoterCards />} />

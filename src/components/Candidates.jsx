@@ -21,6 +21,7 @@ const Candidates = () => {
   useEffect(() => {
     const fetchData = async () => {
       const querySnapshot = await getDocs(collection(db, "candidates"));
+
       const data = querySnapshot.docs.map((doc) => doc.data());
       setCandidates(data);
       setTotalVotes(data.reduce((acc, curr) => acc + curr.votes, 0));

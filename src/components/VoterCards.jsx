@@ -80,7 +80,7 @@ const VoterCards = () => {
       {/* Container untuk cetak */}
       <Box
         sx={{
-          columnCount: { xs: 1, print: 3 },
+          columnCount: { xs: 2, print: 3 },
           columnGap: { print: "0.5cm" },
           "@media print": {
             width: "100%",
@@ -119,6 +119,7 @@ const VoterCards = () => {
                 "@media print": {
                   fontSize: "10pt",
                   fontWeight: "bold",
+                  textAlign: "center"
                 },
               }}
             >
